@@ -30,6 +30,7 @@ fun WeatherNavigation() {
 
 
     NavHost(navController = navController, startDestination =Screens.SplashScreen.name){
+
         composable(Screens.SplashScreen.name){
             weatherSplashScreen(navController = navController )
 

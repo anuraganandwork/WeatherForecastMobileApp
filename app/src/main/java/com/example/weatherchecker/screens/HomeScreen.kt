@@ -147,7 +147,7 @@ fun HomeScreen(data: apiData, navController: NavController, viewmodel: viewmodel
                         val imgURL = "https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png"
                         val tempURP =
                             Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally ) {
-
+                                    val temp = (data.list[0].temp.day -32) * (5/9)
                                 Image(painter = rememberImagePainter(data =imgURL ),
                                     "Icon loading",modifier = Modifier.size(80.dp),)
                                 Text(text = "${data.list[0].temp.day}°", color = Color.Black, fontSize = 30.sp, fontStyle = FontStyle.Italic, fontWeight = FontWeight.Bold)
